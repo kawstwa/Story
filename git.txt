@@ -79,3 +79,45 @@ Updated 1 path from the index
 
 git diff chapter2.txt
 
+### STARTED OVER WITH A NEW FOLDER AND CAUGHT UP TO THIS POINT WITH MINOR DIFFERENCES.
+### NO DIFFERENCES FOR EDUCATIONAL PURPOSE
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ git log
+commit 43d7fa52acef3717eef592113408b1af947f67c1 (HEAD -> master)
+Author: Tural Abbasov <twa001@gmail.com>
+Date:   Sun Nov 3 09:56:00 2024 -0500
+
+    Change to Chapters 1, 2 and 3
+
+commit f586f289047aee7862ed83a17e1d7436cf21df14
+Author: Tural Abbasov <twa001@gmail.com>
+Date:   Sun Nov 3 09:52:55 2024 -0500
+
+    Complete Chapters 1, 2, 3. Git basic commands file
+
+
+### INITIALIZED REMOTE REPOSITORY ON GITHUB
+
+$ git branch -M main
+
+$ git remote add origin https://github.com/kawstwa/Story.git
+
+$ git push -u origin main
+info: please complete authentication in your browser...  # AUTHENTICATE THROUGH THE BROWSER
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 1.83 KiB | 467.00 KiB/s, done.
+Total 11 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/kawstwa/Story.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+# IN GITHUB. CLICK ON Insights, AND CHOOSE Network. WAIT FOR THE CHANGES TO LOAD, AND YOU'LL SEE TWO SAVE POINTS
+# THESE ARE YOUR SAVE POINTS FROM YOUR LOCAL REPOSITORY
