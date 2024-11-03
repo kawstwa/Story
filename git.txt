@@ -150,3 +150,49 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/kawstwa/Story.git
    43d7fa5..2e66f3f  main -> main
 branch 'main' set up to track 'origin/main'.
+
+$ touch .env
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .env
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git add .
+
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .env
+
+
+$ git rm --cached -r .
+rm '.env'
+rm 'chapter1.txt'
+rm 'chapter2.txt'
+rm 'chapter3.txt'
+rm 'git.txt'
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+# MAKING BRANCHES
+
+$ git branch alien-plot
+
+$ git branch
+  alien-plot
+* main
+
+$ git checkout alien-plot 
+M       .gitignore
+M       git.txt
+Switched to branch 'alien-plot'
+
