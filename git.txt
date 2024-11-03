@@ -1,0 +1,81 @@
+$ ls -a
+./  ../  chapter1.txt
+
+$ git init
+Initialized empty Git repository in C:/Users/kinga/Desktop/Python/Udemy/day70/.git/
+
+$ git config --global user.name "YOUR NAME"
+$ git config --global user.email email@example.com
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git add chapter1.txt 
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   chapter1.txt
+
+$ git commit -m "Complete Chapter 1"
+[master (root-commit) 871abc6] Complete Chapter 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+
+$ git log
+commit 871abc6adfe5bd28a849f48aebc0ca037b008a10 (HEAD -> master)
+Author: Tural Abbasov <twa001@gmail.com>
+Date:   Sun Nov 3 08:43:15 2024 -0500
+
+    Complete Chapter 1
+
+
+$ git log
+commit 4225bd11f2b78a886ec40badcfc2ceee1985b1b9 (HEAD -> master)
+Author: Tural Abbasov <twa001@gmail.com>
+Date:   Sun Nov 3 09:04:51 2024 -0500
+
+    Chapter 2 and 3 Complete. Chapter 1 modified. Git command files first additions
+
+commit 871abc6adfe5bd28a849f48aebc0ca037b008a10
+Author: Tural Abbasov <twa001@gmail.com>
+Date:   Sun Nov 3 08:43:15 2024 -0500
+
+    Complete Chapter 1
+
+
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   chapter2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git diff chapter2.txt
+warning: in the working copy of 'chapter2.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/chapter2.txt b/chapter2.txt
+index d85dcf2..ffcb64a 100644
+--- a/chapter2.txt
++++ b/chapter2.txt
+@@ -1 +1,4 @@
+- It was the age of wisdom, it was the age of foolishness. ### PREVIOUS VERSION
+It was the age of mumbo jumbo, it was the age of whachamacallit.
+\ No newline at end of file
+
+$ git checkout chapter2.txt
+Updated 1 path from the index
+
+git diff chapter2.txt
+
